@@ -1,34 +1,50 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <h1 style="margin: .2rem;">Weather App</h1>
-        <form class="change-location">
-            <label for="city" style="display: block; margin: .5rem 0;">Enter a city to search</label>
-            <input type="text" id="city" placeholder="Enter a Location">
-        </form>
-        <div class="card hide">
-            <div class="card-img">
-                <img src="images/day.svg" alt="">
-            </div>
-            <div class="card-icon">
-                <img src="" alt="">
-            </div>
-            <div class="details">
-                <h2>City Name</h2>
-                <h3>Country</h3>
-                <p>Weather condition</p>
-                <p>temp&deg;c</p>
-            </div>
+      <h1 style="margin: 0.2rem">Weather App</h1>
+      <form class="change-location">
+        <label for="city" style="display: block; margin: 0.5rem 0"
+          >Enter a city to search</label
+        >
+        <input type="text" id="city" placeholder="Enter a Location" />
+      </form>
+      <div class="card hide">
+        <div class="preload hide">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
+        <div class="card-img">
+          <img
+            src="https://mobilebytes.com/wp-content/uploads/2017/10/ef3-placeholder-image.jpg"
+            alt="Weather image"
+          />
+        </div>
+        <div class="card-icon">
+          <img src="" alt="" />
+        </div>
+        <div class="details">
+          <h2>City Name</h2>
+          <h3>Country</h3>
+          <p>Weather condition</p>
+          <p>temp&deg;c</p>
+        </div>
+      </div>
     </div>
     <script src="scripts/forecast.js"></script>
     <script src="scripts/app.js"></script>
-</body>
+  </body>
 </html>
