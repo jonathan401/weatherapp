@@ -1,1 +1,1 @@
-the first version of the weather app
+simple weather app
