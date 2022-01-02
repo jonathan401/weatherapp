@@ -1,7 +1,7 @@
 const key = '936999ca2a95457eafd162318211212';
 
 const getCityInfo = async (city) => {
-    const base = 'http://api.weatherapi.com/v1/';
+    const base = 'https://api.weatherapi.com/v1/';
     const method = 'current.json';
     const query = `?key=${key}&q=${city}&aqi=no`;
     const response = await fetch(base + method + query);
