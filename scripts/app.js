@@ -27,16 +27,13 @@ const updateUI = (data) => {
         <p>${current.temp_c}&deg;c</p>
     `;
     
-    loader.classList.add('hide');
-    /* after the data has been gotten from the api, the loader is given a class of 'hide' which gives the 
-    element a display of none.*/    
-    if(card.classList.contains('hide')){
-        card.classList.remove('hide');
-    }
 }
 
 // handling the user input
 form.addEventListener('submit', e => {
+    if(card.classList.contains('hide')){
+        card.classList.remove('hide');
+    }
     e.preventDefault();
     const cityName = form.city.value.trim();
     form.reset();
@@ -46,8 +43,13 @@ form.addEventListener('submit', e => {
     if(!cityName.length){
         displayError('You must enter a city name!');
     } else {
-        getCityInfo(cityName)
-        .then(data => updateUI(data))
+        getCityInfo(cityName)    
+        .then(data => {
+            loader.classList.add('hide');
+        /* after the data has been gotten from the api, the loader is given a class of 'hide' which gives the 
+        element a display of none.*/
+            updateUI(data);
+        })
         .catch(err => displayError(err.message));
     }
     // calling the getCityInfo function that will take the city name and fetch the data for that city
